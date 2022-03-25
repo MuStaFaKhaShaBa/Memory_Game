@@ -169,10 +169,11 @@ function AddEvent() {
               "Right"
             ); // Change Color Of Shape
           } else {
-            if (Tries.textContent < 8 && element != Check.element) {
+            if (element != Check.element) {
               // Limit Tries
               Tries.textContent++; // Increment Wrong Tries
-            } else {
+            }
+            if (Tries.textContent > 8) {
               (() => {
                 new Promise((resolve) => {
                   resolve(
