@@ -1,0 +1,139 @@
+.container {
+    text-align: center;
+    margin-top: 20px;
+}
+.container > h1 {
+    font-size: 4vw;
+    font-weight: 900;
+    color: var(--mainColor);
+    text-transform: uppercase;
+}
+.container > header,
+.container .timer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    border: 1px solid var(--mainColor);
+    margin: 20px auto;
+    color: var(--fontColor);
+}
+.container > header h2 {
+    font-size: 2.5vw;
+}
+.container > header span {
+    color: var(--secColor);
+}
+
+.container > header p {
+    font-size: 1.8vw;
+}
+.container .Holder {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.container .Holder > .Card {
+    perspective: 300px;
+    width: calc(25% - 10px);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.158);
+    cursor: pointer;
+}
+.container .Holder > .Card .Box {
+    border: 5px solid var(--mainColor);
+    aspect-ratio: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+    transform-style: preserve-3d;
+    position: relative;
+}
+.container .Holder > .Card .Box svg {
+    width: 90%;
+    height: 90%;
+    color: var(--secColor);
+    position: absolute;
+    background-color: #fff;
+    backface-visibility: hidden;
+}
+.container .Holder > .Card .Box svg.Right {
+    color: var(--mainColor);
+}
+.container .Holder .Card .Box .Back {
+    transform: rotateY(180deg);
+}
+.container .Holder .Card .Box.Check,
+.container .Holder .Card .Box.Right {
+    transform: rotateY(180deg);
+    user-select: none;
+    
+}
+@media (min-width: 992px) {
+    .container .Holder {
+        width: 70%;
+        margin: 0 auto;
+    }
+    .container .Holder > .Card .Box {
+        aspect-ratio: 6 / 4;
+    }
+}
+@media (max-width: 767px) {
+    .container > h1 {
+        font-size: 7vw;
+    }
+    .container > header p {
+        font-size: 3.5vw;
+    }
+
+    .container > header h2 {
+        font-size: 4vw;
+    }
+}
+.container .timer {
+    width: 70%;
+    border: 0;
+}
+
+.container .timer button {
+    padding: 10px 20px;
+    border: 1px solid var(--mainColor);
+    background-color: #fff;
+    border-radius: 5px;
+    color: var(--mainColor);
+    position: relative;
+    z-index: 5;
+    transition: .2s;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.container .timer button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 150%;
+    width: 0%;
+    background-color: var(--mainColor);
+    transition: .3s;
+    z-index: -1;
+}
+
+.container .timer button:hover{
+    color: #FFF;
+    transition-delay: .1s;
+}
+
+.container .timer button:hover::before{
+    width: 100%;
+}
+
+.container .timer p{
+    font-size: 20px;
+    color: var(--fontColor);
+}
+.container .timer p span{
+    font-weight: 800;
+}

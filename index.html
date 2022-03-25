@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="CSS/all.min.css">
+
+    <!-- CSS Style -->
+    <link rel="stylesheet" href="CSS/main.css">
+    <link rel="stylesheet" href="CSS/normalize.css">
+    <!-- Bootstrap -->
+
+    <!-- Google Font Roboto -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+
+    <title>Memory Game</title>
+</head>
+
+<body>
+
+    <!-- 
+        new Promise((resolve) => {
+    resolve(
+      Swal.fire({
+        title: "Enter your IP address",
+        input: "text",
+        inputLabel: "Your IP address",
+        showCancelButton: false,
+        inputValidator: (value) => {
+          if (!value) {
+            return "You need to write something!";
+          }
+        },
+      })
+    );
+  }).then(v=>{
+    console.log(v.value);
+  });
+     -->
+
+    <div class="container">
+        <h1>Memory Game</h1>
+        <header>
+            <h2>Hello : <span></span></h2>
+            <p>Wrong Tries : <span>0</span></p>
+        </header>
+        <div class="Holder">
+        </div>
+        <div class="timer">
+            <button>Restart</button>
+            <p class="time"><span>0</span>s</p>
+        </div>
+    </div>
+
+    <!-- Font Awesome Js -->
+    <script src="JS/all.min.js"></script>
+
+    <!-- Script Main JS -->
+
+    <script src="JS/main.js"></script>
+
+    <!-- Alert  -->
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+</body>
+
+</html>
