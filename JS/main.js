@@ -211,6 +211,7 @@ function reStartGame() {
   Holder.innerHTML = "";
   CreateCards();
   Tries.textContent = 0;
+  RightAnswer = 0;
 }
 
 let Check = {
